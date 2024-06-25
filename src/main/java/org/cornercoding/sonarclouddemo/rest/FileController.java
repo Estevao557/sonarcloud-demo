@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import static java.lang.System.in;
+
 @RestController
 public class FileController {
 
@@ -22,7 +24,8 @@ public class FileController {
 
             Path path = Paths.get(filePath);
             String content = new String(Files.readAllBytes(path));
-
+            String variavelNaoUtiliza = "teste";
+            int num = "Errado";
 
             String command = "cat " + filePath;
             Process process = Runtime.getRuntime().exec(command);
